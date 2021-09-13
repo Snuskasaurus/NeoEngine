@@ -4,9 +4,8 @@
     <ClCompile Include="Debug.cpp" />
     <ClCompile Include="Time.cpp" />
     <ClCompile Include="Random.cpp" />
-    <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="_Main.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Debug.h" />
@@ -14,11 +13,11 @@
     <ClInclude Include="Headers\Random.h" />
     <ClInclude Include="Headers\Engine.h" />
     <ClInclude Include="Headers\Entity.h" />
-    <ClInclude Include="Includes\Debug.h" />
+    <ClInclude Include="Includes\Core\Debug.h" />
     <ClInclude Include="Includes\Engine.h" />
-    <ClInclude Include="Includes\Entity.h" />
-    <ClInclude Include="Includes\Random.h" />
-    <ClInclude Include="Includes\Time.h" />
-    <ClInclude Include="Export.h" />
+    <ClInclude Include="Includes\Core\Entity.h" />
+    <ClInclude Include="Includes\Core\Random.h" />
+    <ClInclude Include="Includes\Core\Time.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
 </Project>

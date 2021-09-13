@@ -25,7 +25,8 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType> </ConfigurationType>
+    <ConfigurationType>
+    </ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -59,10 +60,11 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);ENGINE_EXPORT</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)Engine\Includes</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -77,10 +79,11 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions);ENGINE_EXPORT</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)Engine\Includes</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -93,11 +96,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Debug.cpp" />
-    <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Source.cpp" />
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="Time.cpp" />
-    <ClCompile Include="_Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Entity.h" />
@@ -105,12 +107,12 @@
     <ClInclude Include="Headers\Engine.h" />
     <ClInclude Include="Headers\Random.h" />
     <ClInclude Include="Headers\Time.h" />
-    <ClInclude Include="Includes\Debug.h" />
+    <ClInclude Include="Includes\Core\Debug.h" />
     <ClInclude Include="Includes\Engine.h" />
-    <ClInclude Include="Includes\Entity.h" />
-    <ClInclude Include="Includes\Random.h" />
-    <ClInclude Include="Includes\Time.h" />
-    <ClInclude Include="Export.h" />
+    <ClInclude Include="Includes\Core\Entity.h" />
+    <ClInclude Include="Includes\Core\Random.h" />
+    <ClInclude Include="Includes\Core\Time.h" />
+    <ClInclude Include="stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
