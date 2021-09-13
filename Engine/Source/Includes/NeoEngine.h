@@ -1,13 +1,13 @@
 #pragma once
 
 // CORE
-#include "Core/Debug.h"
 #include "Core/Math.h"
 #include "Core/Physic.h"
 #include "Core/Random.h"
 #include "Core/Screen.h"
 #include "Core/Sound.h"
 #include "Core/Time.h"
+#include "Core/Debug.h"
 #include "Core/Vector2D.h"
 
 // SYSTEMS

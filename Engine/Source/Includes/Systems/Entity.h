@@ -39,9 +39,9 @@ namespace neo
 
 		inline void LookAt(const Vector2D& _position) { m_localAngle = Vector2D::Angle(m_localPosition, _position); }
 		inline void LookAt(const Entity& _entity) { m_localAngle = Vector2D::Angle(m_localPosition, _entity.m_localPosition); }
-		inline Vector2D GetForward() const { Vector2D::GetForward(m_localAngle); };
-		inline Vector2D GetRight() const { Vector2D::GetForward(m_localAngle).GetRight(); };
-		inline Vector2D GetLeft() const { Vector2D::GetForward(m_localAngle).GetLeft(); };
+		//inline Vector2D GetForward() const { Vector2D::GetForward(m_localAngle); };
+		//inline Vector2D GetRight() const { Vector2D::GetForward(m_localAngle).GetRight(); };
+		//inline Vector2D GetLeft() const { Vector2D::GetForward(m_localAngle).GetLeft(); };*/
 		inline std::string GetName() const { return m_name; }
 		inline unsigned int GetTag() const { return m_tag; }
 
