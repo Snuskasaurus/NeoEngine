@@ -1,11 +1,10 @@
 # Visual Folder
-.vs/
+.vs/***
+W:\Work\CPPEngine\.vs\Project\v16\.suo
 
 # Intermediate Folders
-Engine/Intermediate/Debug/
-Engine/Intermediate/Release/
-Game/Intermediate/Debug/
-Game/Intermediate/Release/
+*/Intermediate/Debug/***
+*/Intermediate/Release/***
 
 # Prerequisites
 *.d
@@ -23,7 +22,6 @@ Game/Intermediate/Release/
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
 
 # Fortran module files
 *.mod
@@ -33,9 +31,9 @@ Game/Intermediate/Release/
 *.lai
 *.la
 *.a
-*.lib
 
 # Executables
-*.exe
 *.out
 *.app
+*.tlog
+*.iobj
