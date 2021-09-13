@@ -1,4 +1,5 @@
 ﻿#pragma once
+#include "../Export.h"
 
 #define PI 3.14f
 

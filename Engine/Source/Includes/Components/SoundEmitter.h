@@ -1,5 +1,9 @@
 #pragma once
 
+#include <vector>
+#include <string>
+#include <SFML/Audio.hpp>
+
 #define TEMP_VOLUME 2.5f
 
 #define SOUND_DATA_FOLDER_PATH "Data/Sounds/"

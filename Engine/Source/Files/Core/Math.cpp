@@ -1,5 +1,7 @@
 #include "../../Includes/Core/Math.h"
 
+#include <cmath>
+
 using namespace neo;
 
 float Math::Repeat(float _value, float _length)

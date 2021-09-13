@@ -1,4 +1,5 @@
 #pragma once
+#include "../Export.h"
 
 #define NB_TAG_COLLIDER 20
 

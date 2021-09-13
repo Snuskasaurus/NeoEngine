@@ -5,7 +5,7 @@
 #include "Core/Physic.h"
 #include "Core/Random.h"
 #include "Core/Screen.h"
-#include "Core/Sound.h"
+#include "Core/Audio.h"
 #include "Core/Time.h"
 #include "Core/Debug.h"
 #include "Core/Vector2D.h"

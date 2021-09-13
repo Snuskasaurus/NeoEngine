@@ -1,5 +1,7 @@
 #include "../../Includes/Core/Vector2D.h"
 
+#include <cassert>
+
 using namespace neo;
 
 Vector2D Vector2D::Zero = Vector2D(0.0f, 0.0f);

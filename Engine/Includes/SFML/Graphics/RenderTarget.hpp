@@ -89,7 +89,7 @@ public:
     /// \see getView, getDefaultView
     ///
     ////////////////////////////////////////////////////////////
-    void setView(const View& m_view);
+    void setView(const View& view);
 
     ////////////////////////////////////////////////////////////
     /// \brief Get the view currently in use in the render target
@@ -127,7 +127,7 @@ public:
     /// \return Viewport rectangle, expressed in pixels
     ///
     ////////////////////////////////////////////////////////////
-    IntRect getViewport(const View& m_view) const;
+    IntRect getViewport(const View& view) const;
 
     ////////////////////////////////////////////////////////////
     /// \brief Convert a point from target coordinates to world
@@ -178,7 +178,7 @@ public:
     /// \see mapCoordsToPixel
     ///
     ////////////////////////////////////////////////////////////
-    Vector2f mapPixelToCoords(const Vector2i& point, const View& m_view) const;
+    Vector2f mapPixelToCoords(const Vector2i& point, const View& view) const;
 
     ////////////////////////////////////////////////////////////
     /// \brief Convert a point from world coordinates to target
@@ -225,7 +225,7 @@ public:
     /// \see mapPixelToCoords
     ///
     ////////////////////////////////////////////////////////////
-    Vector2i mapCoordsToPixel(const Vector2f& point, const View& m_view) const;
+    Vector2i mapCoordsToPixel(const Vector2f& point, const View& view) const;
 
     ////////////////////////////////////////////////////////////
     /// \brief Draw a drawable object to the render target

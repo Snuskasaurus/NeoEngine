@@ -1,4 +1,8 @@
 #pragma once
+#include "../Export.h"
+
+#include <string>
+#include <vector>
 
 #include "Component.h"
 #include "../Core/Vector2D.h"

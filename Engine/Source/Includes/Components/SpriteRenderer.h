@@ -1,6 +1,10 @@
 #pragma once
+#include "../Export.h"
 
 #include "../Core/Vector2D.h"
+
+#include <SFML/Graphics/Texture.hpp>
+#include <SFML/Graphics/Sprite.hpp>
 
 #define SPRITE_DATA_FOLDER_PATH "Data/Sprites/"
 #define SPRITE_EXTENSION ".png"

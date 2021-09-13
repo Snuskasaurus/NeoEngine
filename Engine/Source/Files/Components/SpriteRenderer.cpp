@@ -1,6 +1,10 @@
 #include "../../Includes/Components/SpriteRenderer.h"
 
+#include <iostream>
+
 #include "../../Includes/Core/Screen.h"
+
+#include <iostream>
 
 using namespace neo;
 
@@ -80,10 +84,10 @@ void SpriteRenderer::Draw(Vector2D _position, float _size, float _angle, float _
 void SpriteRenderer::Draw(sf::Vector2f _position, float _size, float _angle, float _opacity)
 {
 	if (nullptr == m_sprite) return;
-	static sf::RenderWindow& window = Screen::GetWindow();
+	static sf::RenderWindow* window = Screen::GetWindow();
 	m_sprite->setPosition(_position);
 	m_sprite->setScale(sf::Vector2f(_size, _size));
 	m_sprite->setRotation(_angle);
 	m_sprite->setColor(sf::Color((sf::Uint8)255, (sf::Uint8)255, (sf::Uint8)255, (sf::Uint8)(_opacity * 255.0f)));
-	window.draw(*m_sprite);
+	window->draw(*m_sprite);
 }

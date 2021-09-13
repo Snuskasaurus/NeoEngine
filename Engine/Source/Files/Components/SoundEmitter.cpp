@@ -2,7 +2,7 @@
 
 using namespace neo;
 
-#include "../../Includes/Core/Sound.h"
+#include "../../Includes/Core/Audio.h"
 #include "../../Includes/Core/Random.h"
 
 SoundEmitter::~SoundEmitter()
@@ -38,5 +38,5 @@ void SoundEmitter::Play()
 	if (nullptr == newSound) return;
 	newSound->setVolume(TEMP_VOLUME);
 	newSound->play();
-	Sound::Add(newSound);
+	Audio::Add(newSound);
 }

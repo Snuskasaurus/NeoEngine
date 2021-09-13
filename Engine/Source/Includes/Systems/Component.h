@@ -1,5 +1,7 @@
 #pragma once
+#include "../Export.h"
 
+#include <string>
 
 namespace neo
 {

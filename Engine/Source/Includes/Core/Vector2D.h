@@ -1,6 +1,9 @@
 #pragma once
+#include "../Export.h"
 
 #include "Math.h"
+
+#include <SFML/System.hpp>
 
 namespace neo
 {

@@ -44,7 +44,7 @@
     <ClCompile Include="Files\Core\Screen.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="Files\Core\Sound.cpp">
+    <ClCompile Include="Files\Core\Audio.cpp">
       <Filter>Core</Filter>
     </ClCompile>
   </ItemGroup>
@@ -87,7 +87,6 @@
     <ClInclude Include="Includes\Systems\Component.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="Export.h" />
     <ClInclude Include="Includes\Systems\Entity.h">
       <Filter>Core</Filter>
     </ClInclude>
@@ -100,16 +99,12 @@
     <ClInclude Include="Includes\Components\SoundEmitter.h">
       <Filter>Components</Filter>
     </ClInclude>
-    <ClInclude Include="Includes\Components\SpriteRenderer.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Includes\Core\Entity.h" />
     <ClInclude Include="Includes\Core\Screen.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="Includes\Core\Sound.h">
-      <Filter>Core</Filter>
-    </ClInclude>
+    <ClInclude Include="Includes\Export.h" />
+    <ClInclude Include="Includes\Components\SpriteRenderer.h" />
+    <ClInclude Include="Includes\Core\Audio.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">
