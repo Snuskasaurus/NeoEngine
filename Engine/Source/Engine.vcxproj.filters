@@ -6,11 +6,19 @@
     <ClCompile Include="Random.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="_Main.cpp" />
+    <ClCompile Include="Entity.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Debug.h" />
-    <ClInclude Include="Time.h" />
-    <ClInclude Include="Random.h" />
-    <ClInclude Include="Engine.h" />
+    <ClInclude Include="Headers\Debug.h" />
+    <ClInclude Include="Headers\Time.h" />
+    <ClInclude Include="Headers\Random.h" />
+    <ClInclude Include="Headers\Engine.h" />
+    <ClInclude Include="Headers\Entity.h" />
+    <ClInclude Include="Includes\Debug.h" />
+    <ClInclude Include="Includes\Engine.h" />
+    <ClInclude Include="Includes\Entity.h" />
+    <ClInclude Include="Includes\Random.h" />
+    <ClInclude Include="Includes\Time.h" />
+    <ClInclude Include="Export.h" />
   </ItemGroup>
 </Project>

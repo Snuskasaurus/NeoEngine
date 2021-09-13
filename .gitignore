@@ -1,5 +1,11 @@
-# visual Folder
+# Visual Folder
 .vs/
+
+# Intermediate Folders
+Engine/Intermediate/Debug/
+Engine/Intermediate/Release/
+Game/Intermediate/Debug/
+Game/Intermediate/Release/
 
 # Prerequisites
 *.d
