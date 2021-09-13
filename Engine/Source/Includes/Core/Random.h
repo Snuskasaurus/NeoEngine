@@ -1,7 +1,9 @@
 #pragma once
 
-ENGINE_API class Random
+namespace neo
 {
-	int m_test = 0;
-};
-
+	class NEOENGINE_API Random
+	{
+		int m_test = 0;
+	};
+}

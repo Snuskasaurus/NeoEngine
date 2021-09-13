@@ -1,7 +1,10 @@
 #pragma once
 
-ENGINE_API class Time
+namespace neo
 {
-	int m_test = 0;
-};
+	class NEOENGINE_API Time
+	{
+		int m_test = 0;
+	};
+}
 

@@ -1,14 +1,15 @@
 #pragma once
 
 // STD
-#include <stdio.h>
-#include <tchar.h>
-#include <iostream>
-using namespace std;
+#include <list>
+#include <vector>
 
 // SFML
+#include <SFML/System.hpp>
+#include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+#include <SFML/Network.hpp>
 
 // ENGINE
-#include "Includes/Engine.h"
+#include "Includes/NeoEngine.h"

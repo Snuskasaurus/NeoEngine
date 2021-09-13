@@ -1,7 +1,9 @@
 #pragma once
 
-ENGINE_API class Debug
+namespace neo
 {
-	int m_test = 0;
-};
-
+	class NEOENGINE_API Debug
+	{
+		int m_test = 0;
+	};
+}

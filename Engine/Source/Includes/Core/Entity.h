@@ -1,7 +1,10 @@
 #pragma once
 
-ENGINE_API class Entity
+namespace neo
 {
-public:
-	int m_test = 0;
-};
+	class NEOENGINE_API Entity
+	{
+	public:
+		int m_test = 0;
+	};
+}
