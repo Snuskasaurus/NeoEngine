@@ -45,14 +45,14 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)Engine\Source\Libraries</OutDir>
+    <OutDir>$(SolutionDir)Engine\Source\Libraries\</OutDir>
     <TargetName>NeoEngine-d</TargetName>
     <IntDir>$(SolutionDir)Engine\Intermediate\Debug\</IntDir>
     <IncludePath>$(ProjectDir);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)Engine\Source\Libraries</OutDir>
+    <OutDir>$(SolutionDir)Engine\Source\Libraries\</OutDir>
     <TargetName>NeoEngine</TargetName>
     <IntDir>$(SolutionDir)Engine\Intermediate\Release\</IntDir>
     <IncludePath>$(ProjectDir);</IncludePath>
@@ -65,7 +65,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)Engine\Includes</AdditionalIncludeDirectories>
-      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <ForcedIncludeFiles>stdafx.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
     <Link>
@@ -85,7 +85,7 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>$(SolutionDir)Engine\Includes</AdditionalIncludeDirectories>
-      <PrecompiledHeader>Create</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
       <ForcedIncludeFiles>stdafx.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
     </ClCompile>
     <Link>
@@ -98,24 +98,49 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Debug.cpp" />
-    <ClCompile Include="Entity.cpp" />
-    <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Random.cpp" />
-    <ClCompile Include="Time.cpp" />
+    <ClCompile Include="Files\Components\CircleCollider.cpp" />
+    <ClCompile Include="Files\Components\Collider.cpp" />
+    <ClCompile Include="Files\Components\SoundEmitter.cpp" />
+    <ClCompile Include="Files\Components\SpriteRenderer.cpp" />
+    <ClCompile Include="Files\Core\Physic.cpp" />
+    <ClCompile Include="Files\Systems\Component.cpp" />
+    <ClCompile Include="Files\Core\Debug.cpp" />
+    <ClCompile Include="Files\Systems\Entity.cpp" />
+    <ClCompile Include="Files\Core\Math.cpp" />
+    <ClCompile Include="Files\Systems\State.cpp" />
+    <ClCompile Include="Files\Core\Sound.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Files\Core\Random.cpp" />
+    <ClCompile Include="Files\Core\Time.cpp" />
+    <ClCompile Include="Files\Core\Vector2D.cpp" />
+    <ClCompile Include="Files\Core\Screen.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Headers\Entity.h" />
+    <ClInclude Include="Export.h" />
+    <ClInclude Include="Includes\Components\CircleCollider.h" />
+    <ClInclude Include="Includes\Components\Collider.h" />
+    <ClInclude Include="Includes\Components\SoundEmitter.h" />
+    <ClInclude Include="Includes\Components\SpriteRenderer.h" />
+    <ClInclude Include="Includes\Systems\Component.h" />
+    <ClInclude Include="Includes\Systems\Entity.h" />
+    <ClInclude Include="Includes\Core\Physic.h" />
     <ClInclude Include="Headers\Debug.h" />
     <ClInclude Include="Headers\Engine.h" />
     <ClInclude Include="Headers\Random.h" />
     <ClInclude Include="Headers\Time.h" />
     <ClInclude Include="Includes\Core\Debug.h" />
     <ClInclude Include="Includes\NeoEngine.h" />
-    <ClInclude Include="Includes\Core\Entity.h" />
     <ClInclude Include="Includes\Core\Random.h" />
     <ClInclude Include="Includes\Core\Time.h" />
+    <ClInclude Include="Includes\Core\Math.h" />
+    <ClInclude Include="Includes\Systems\State.h" />
+    <ClInclude Include="Includes\Core\Sound.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Includes\Core\Vector2D.h" />
+    <ClInclude Include="Includes\Core\Screen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

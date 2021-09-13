@@ -1,23 +1,122 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="Debug.cpp" />
-    <ClCompile Include="Time.cpp" />
-    <ClCompile Include="Random.cpp" />
-    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Files\Core\Physic.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Core\Debug.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Systems\Entity.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Core\Math.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Core\Random.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Systems\State.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Core\Time.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Core\Vector2D.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
     <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Files\Systems\Component.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Components\CircleCollider.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Components\Collider.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Components\SoundEmitter.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Components\SpriteRenderer.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Core\Screen.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Files\Core\Sound.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Headers\Debug.h" />
-    <ClInclude Include="Headers\Time.h" />
-    <ClInclude Include="Headers\Random.h" />
-    <ClInclude Include="Headers\Engine.h" />
-    <ClInclude Include="Headers\Entity.h" />
-    <ClInclude Include="Includes\Core\Debug.h" />
-    <ClInclude Include="Includes\NeoEngine.h" />
-    <ClInclude Include="Includes\Core\Entity.h" />
-    <ClInclude Include="Includes\Core\Random.h" />
-    <ClInclude Include="Includes\Core\Time.h" />
+    <ClInclude Include="Includes\Core\Physic.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Debug.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes\Core\Debug.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Engine.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes\Core\Math.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes\Core\Random.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Random.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes\Systems\State.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Time.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes\Core\Time.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes\Core\Vector2D.h">
+      <Filter>Core</Filter>
+    </ClInclude>
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Includes\NeoEngine.h" />
+    <ClInclude Include="Includes\Systems\Component.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Export.h" />
+    <ClInclude Include="Includes\Systems\Entity.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes\Components\CircleCollider.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes\Components\Collider.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes\Components\SoundEmitter.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes\Components\SpriteRenderer.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes\Core\Entity.h" />
+    <ClInclude Include="Includes\Core\Screen.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Includes\Core\Sound.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Core">
+      <UniqueIdentifier>{eb02e11e-a107-40d7-9f0f-b8ab0e9e701c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components">
+      <UniqueIdentifier>{a8e445a5-676b-41a1-87a8-529fc59af07c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

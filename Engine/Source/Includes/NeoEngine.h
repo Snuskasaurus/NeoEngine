@@ -1,17 +1,22 @@
 #pragma once
 
-#   ifdef NEOENGINE_EXPORT
-#       define NEOENGINE_API __declspec(dllexport)
-#   else
-#       ifdef NEOENGINE_API_STATIC
-#           define NEOENGINE_API
-#       else
-#           define NEOENGINE_API __declspec(dllimport)
-#       endif
-#   endif
-
+// CORE
 #include "Core/Debug.h"
-#include "Core/Entity.h"
+#include "Core/Math.h"
+#include "Core/Physic.h"
 #include "Core/Random.h"
+#include "Core/Screen.h"
+#include "Core/Sound.h"
 #include "Core/Time.h"
+#include "Core/Vector2D.h"
 
+// SYSTEMS
+#include "Systems/Component.h"
+#include "Systems/Entity.h"
+#include "Systems/State.h"
+
+// COMPONENTS
+#include "Components/Collider.h"
+#include "Components/CircleCollider.h"
+#include "Components/SoundEmitter.h"
+#include "Components/SpriteRenderer.h"
