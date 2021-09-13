@@ -1,10 +1,10 @@
 # Visual Folder
+.vs/*
+.vs/**
 .vs/***
-W:\Work\CPPEngine\.vs\Project\v16\.suo
 
 # Intermediate Folders
-*/Intermediate/Debug/***
-*/Intermediate/Release/***
+Intermediate/
 
 # Prerequisites
 *.d
