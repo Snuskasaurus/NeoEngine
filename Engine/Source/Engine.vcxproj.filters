@@ -16,7 +16,7 @@
     <ClCompile Include="Files\Core\Random.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="Files\Systems\State.cpp">
+    <ClCompile Include="Files\Systems\Scene.cpp">
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Files\Core\Time.cpp">
@@ -47,6 +47,9 @@
     <ClCompile Include="Files\Core\Audio.cpp">
       <Filter>Core</Filter>
     </ClCompile>
+    <ClCompile Include="Files\Core\Game.cpp" />
+    <ClCompile Include="Files\Core\SceneManager.cpp" />
+    <ClCompile Include="Files\Core\Settings.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Includes\Core\Physic.h">
@@ -70,7 +73,7 @@
     <ClInclude Include="Headers\Random.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="Includes\Systems\State.h">
+    <ClInclude Include="Includes\Systems\Scene.h">
       <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Headers\Time.h">
@@ -105,6 +108,9 @@
     <ClInclude Include="Includes\Export.h" />
     <ClInclude Include="Includes\Components\SpriteRenderer.h" />
     <ClInclude Include="Includes\Core\Audio.h" />
+    <ClInclude Include="Includes\Core\Game.h" />
+    <ClInclude Include="Includes\Core\SceneManager.h" />
+    <ClInclude Include="Includes\Core\Settings.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

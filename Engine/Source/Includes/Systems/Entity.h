@@ -16,7 +16,7 @@ namespace neo
 		static Entity* Root;
 
 		Entity(Entity* _parent, const std::string& _name);
-		~Entity();
+		virtual ~Entity();
 
 		Entity* GetChild(const std::string& _name) const;
 		// This method is automatly called when creating a new entity
@@ -38,8 +38,10 @@ namespace neo
 		// Delete and detach the component from this entity
 		bool DeleteComponent(Component& _component);
 
+		void Load();
 		void Update();
 		void Draw() const;
+		void Exit() const;
 
 		inline void LookAt(const Vector2D& _position) { m_localAngle = Vector2D::Angle(m_localPosition, _position); }
 		inline void LookAt(const Entity& _entity) { m_localAngle = Vector2D::Angle(m_localPosition, _entity.m_localPosition); }

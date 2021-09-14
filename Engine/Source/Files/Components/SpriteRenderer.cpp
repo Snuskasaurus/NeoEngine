@@ -78,7 +78,7 @@ void SpriteRenderer::SetOrigin(float _xOrigin, float _yOrigin)
 
 void SpriteRenderer::Draw(Vector2D _position, float _size, float _angle, float _opacity)
 {
-	Draw(_position.ToSFML(), _size, _angle, _opacity);
+	Draw((sf::Vector2f)_position, _size, _angle, _opacity);
 }
 
 void SpriteRenderer::Draw(sf::Vector2f _position, float _size, float _angle, float _opacity)

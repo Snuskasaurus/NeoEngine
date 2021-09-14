@@ -11,7 +11,7 @@ namespace neo
 	{
 	public:
 		Component(Entity& _parent, const std::string& _name);
-		~Component() = default;
+		virtual ~Component() = default;
 
 		virtual void Update() = 0;
 		virtual void Draw() const = 0;

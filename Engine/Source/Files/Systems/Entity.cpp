@@ -105,6 +105,10 @@ namespace neo
 		return true;
 	}
 
+	void Entity::Load()
+	{
+	}
+
 	void Entity::Update()
 	{
 		for (Entity* entity : m_childs) entity->Update();
@@ -115,6 +119,10 @@ namespace neo
 	{
 		for (Entity* entity : m_childs) entity->Draw();
 		for (Component* component : m_components) component->Draw();
+	}
+
+	void Entity::Exit() const
+	{
 	}
 
 	Vector2D Entity::GetWorldPosition() const

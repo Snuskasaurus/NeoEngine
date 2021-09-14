@@ -51,6 +51,10 @@ namespace neo
 		inline bool operator> (const Vector2D& _v) const { return SUP(SquareMagnitude(), _v.SquareMagnitude()); }
 		inline bool operator>= (const Vector2D& _v) const { return SUPEQUALS(SquareMagnitude(), _v.SquareMagnitude()); }
 
+		inline operator sf::Vector2f() const { return sf::Vector2f(x, y); }
+		inline operator sf::Vector2i() const { return sf::Vector2i((int)x, (int)y); }
+		inline operator sf::Vector2u() const { return sf::Vector2u((unsigned int)x, (unsigned int)y); }
+
 		inline Vector2D GetRight() const { return Vector2D(y, -x).Normalized(); }
 		inline Vector2D GetLeft() const { return Vector2D(-y, x).Normalized(); }
 
@@ -61,7 +65,6 @@ namespace neo
 		inline float Magnitude() const { return sqrtf(x * x + y * y); }
 		inline float SquareMagnitude() const { return x * x + y * y; }
 		Vector2D Normalized() const;
-		inline sf::Vector2f ToSFML() const { return sf::Vector2f(x, y); }
 
 		float x = 0.0f;
 		float y = 0.0f;

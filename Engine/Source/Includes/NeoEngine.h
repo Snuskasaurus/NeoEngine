@@ -9,11 +9,12 @@
 #include "Core/Time.h"
 #include "Core/Debug.h"
 #include "Core/Vector2D.h"
+#include "Core/Game.h"
 
 // SYSTEMS
 #include "Systems/Component.h"
 #include "Systems/Entity.h"
-#include "Systems/State.h"
+#include "Systems/Scene.h"
 
 // COMPONENTS
 #include "Components/Collider.h"
