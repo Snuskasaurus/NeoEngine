@@ -1,7 +1,10 @@
 #pragma once
 #include "../Export.h"
 
-#include <SFML/Audio.hpp>
+namespace sf
+{
+	class Sound;
+}
 
 namespace neo
 {

@@ -1,4 +1,5 @@
 #include "../../Includes/Core/Audio.h"
+#include <SFML/Audio.hpp>
 
 using namespace neo;
 

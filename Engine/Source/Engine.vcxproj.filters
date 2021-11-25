@@ -29,12 +29,6 @@
     <ClCompile Include="Files\Systems\Component.cpp">
       <Filter>Core</Filter>
     </ClCompile>
-    <ClCompile Include="Files\Components\CircleCollider.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Files\Components\Collider.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
     <ClCompile Include="Files\Components\SoundEmitter.cpp">
       <Filter>Components</Filter>
     </ClCompile>
@@ -50,6 +44,8 @@
     <ClCompile Include="Files\Core\Game.cpp" />
     <ClCompile Include="Files\Core\SceneManager.cpp" />
     <ClCompile Include="Files\Core\Settings.cpp" />
+    <ClCompile Include="Files\Core\AssetManager.cpp" />
+    <ClCompile Include="Files\Assets\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Includes\Core\Physic.h">
@@ -111,6 +107,8 @@
     <ClInclude Include="Includes\Core\Game.h" />
     <ClInclude Include="Includes\Core\SceneManager.h" />
     <ClInclude Include="Includes\Core\Settings.h" />
+    <ClInclude Include="Includes\Core\AssetManager.h" />
+    <ClInclude Include="Includes\Assets\Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

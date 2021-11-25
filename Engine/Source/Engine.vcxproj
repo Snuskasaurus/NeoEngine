@@ -106,8 +106,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Files\Components\CircleCollider.cpp" />
-    <ClCompile Include="Files\Components\Collider.cpp" />
+    <ClCompile Include="Files\Core\AssetManager.cpp" />
     <ClCompile Include="Files\Components\SoundEmitter.cpp" />
     <ClCompile Include="Files\Components\SpriteRenderer.cpp" />
     <ClCompile Include="Files\Core\Physic.cpp" />
@@ -120,6 +119,7 @@
     <ClCompile Include="Files\Core\Game.cpp" />
     <ClCompile Include="Files\Core\SceneManager.cpp" />
     <ClCompile Include="Files\Core\Settings.cpp" />
+    <ClCompile Include="Files\Assets\Texture.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
@@ -130,6 +130,7 @@
     <ClCompile Include="Files\Core\Screen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Includes\Core\AssetManager.h" />
     <ClInclude Include="Includes\Core\Game.h" />
     <ClInclude Include="Includes\Components\CircleCollider.h" />
     <ClInclude Include="Includes\Components\Collider.h" />
@@ -152,6 +153,7 @@
     <ClInclude Include="Includes\Systems\Scene.h" />
     <ClInclude Include="Includes\Core\SceneManager.h" />
     <ClInclude Include="Includes\Core\Settings.h" />
+    <ClInclude Include="Includes\Assets\Texture.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Includes\Core\Vector2D.h" />
     <ClInclude Include="Includes\Core\Screen.h" />

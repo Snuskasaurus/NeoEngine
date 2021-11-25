@@ -2,12 +2,17 @@
 
 #include <vector>
 #include <string>
-#include <SFML/Audio.hpp>
 
 #define TEMP_VOLUME 2.5f
 
 #define SOUND_DATA_FOLDER_PATH "Data/Sounds/"
 #define SOUND_EXTENSION ".wav"
+
+namespace sf
+{
+	class Sound;
+	class SoundBuffer;
+}
 
 namespace neo
 {

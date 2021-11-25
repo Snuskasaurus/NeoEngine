@@ -1,5 +1,6 @@
 #include "../../Includes/Core/Vector2D.h"
 
+#include <SFML/System.hpp>
 #include <cassert>
 
 using namespace neo;
@@ -113,9 +114,3 @@ std::string Vector2D::ToString() const
 	s += ")";
 	return s;
 }
-
-//std::ostream& operator<<(std::ostream& _out, const Vector2D& _vector)
-//{
-//	_out << _vector.ToString();
-//	return _out;
-//}

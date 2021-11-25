@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "../Export.h"
+#include <cmath>
 
 #define PI 3.14f
 

@@ -1,6 +1,5 @@
 #pragma once
 #include "../Export.h"
-
 #include <string>
 
 namespace neo
@@ -19,7 +18,7 @@ namespace neo
 		inline std::string GetName() const { return m_name; }
 
 	private:
-		std::string m_name = "";
+		std::string m_name;
 		Entity& m_parent;
 	};
 }

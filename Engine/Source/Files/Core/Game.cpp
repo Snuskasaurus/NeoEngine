@@ -30,7 +30,8 @@ void Game::Run()
 {
 	static Game* game = Instance();
 
-	sf::RenderWindow* window = Screen::GetWindow();
+	sf::RenderWindow* window = Screen::GetRenderWindow();
+	if (nullptr == window) return;
 	while (game->m_isRunning == true)
 	{
 		// Events
@@ -51,7 +52,6 @@ void Game::Run()
 		if (game->m_isRunning == true) SceneManager::Draw();
 		window->display();
 	}
-
 }
 
 void Game::Exit()
@@ -61,4 +61,5 @@ void Game::Exit()
 	//Audio::Exit();
 	//Time::Exit();
 	SceneManager::Exit();
+	Screen::Exit();
 }

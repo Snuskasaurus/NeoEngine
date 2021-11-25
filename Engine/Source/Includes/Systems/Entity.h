@@ -19,9 +19,9 @@ namespace neo
 		virtual ~Entity();
 
 		Entity* GetChild(const std::string& _name) const;
-		// This method is automatly called when creating a new entity
+		// This method is automatically called when creating a new entity
 		inline void AttachChild(Entity& _child) { m_childs.push_back(&_child); }
-		// Should only be called by this entity, if not, be carefull with memory leak
+		// Should only be called by this entity, if not, be careful with memory leak
 		bool DetachChild(Entity& _child);
 		// Delete and detach the child from this entity
 		bool DeleteChild(const std::string& _name);
@@ -29,9 +29,9 @@ namespace neo
 		bool DeleteChild(Entity& _child);
 
 		Component* GetComponent(const std::string& _name) const;
-		// This method is automatly called when creating a new component
+		// This method is automatically called when creating a new component
 		inline void AttachComponent(Component& _component) { m_components.push_back(&_component); }
-		// Should only be called by this entity, if not, be carefull with memory leak
+		// Should only be called by this entity, if not, be careful with memory leak
 		bool DetachComponent(Component& _component);
 		// Delete and detach the component from this entity
 		bool DeleteComponent(const std::string& _name);
@@ -62,7 +62,7 @@ namespace neo
 	private:
 
 		unsigned int m_tag = 0;
-		std::string m_name = "";
+		std::string m_name;
 		Entity* m_parent = nullptr;
 		std::vector<Entity*> m_childs;
 		std::vector<Component*> m_components;

@@ -4,6 +4,7 @@ using namespace neo;
 
 #include "../../Includes/Core/Audio.h"
 #include "../../Includes/Core/Random.h"
+#include <SFML/Audio.hpp>
 
 SoundEmitter::~SoundEmitter()
 {

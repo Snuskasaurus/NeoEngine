@@ -1,9 +1,7 @@
 #pragma once
 #include "../Export.h"
-
-#include <SFML/System.hpp>
-
 #include "Math.h"
+#include <string>
 
 namespace neo
 {
@@ -28,9 +26,6 @@ namespace neo
 		// Returns the square distance between point1 and point2.
 		static float SquareDistance(const Vector2D& _point1, const Vector2D& _point2);
 
-		Vector2D(const sf::Vector2u& _other) :x((float)_other.x), y((float)_other.y) {}
-		Vector2D(const sf::Vector2i& _other) :x((float)_other.x), y((float)_other.y) {}
-		Vector2D(const sf::Vector2f& _other) :x(_other.x), y(_other.y) {}
 		Vector2D(const Vector2D& _other) :x(_other.x), y(_other.y) {}
 		Vector2D(float _x = 0.0f, float _y = 0.0f) :x(_x), y(_y) {}
 		~Vector2D() = default;
@@ -51,15 +46,10 @@ namespace neo
 		inline bool operator> (const Vector2D& _v) const { return SUP(SquareMagnitude(), _v.SquareMagnitude()); }
 		inline bool operator>= (const Vector2D& _v) const { return SUPEQUALS(SquareMagnitude(), _v.SquareMagnitude()); }
 
-		inline operator sf::Vector2f() const { return sf::Vector2f(x, y); }
-		inline operator sf::Vector2i() const { return sf::Vector2i((int)x, (int)y); }
-		inline operator sf::Vector2u() const { return sf::Vector2u((unsigned int)x, (unsigned int)y); }
-
 		inline Vector2D GetRight() const { return Vector2D(y, -x).Normalized(); }
 		inline Vector2D GetLeft() const { return Vector2D(-y, x).Normalized(); }
 
 		std::string ToString() const;
-		//friend std::ostream& operator<<(std::ostream& _out, const Vector2D& _vector);
 
 		inline float GetAngle() const { return Angle(Vector2D::Zero, *this); }
 		inline float Magnitude() const { return sqrtf(x * x + y * y); }

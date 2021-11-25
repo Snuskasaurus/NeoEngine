@@ -1,11 +1,12 @@
 #pragma once
 #include "../Export.h"
+#include <string>
 
 namespace neo
 {
 	class NEOENGINE_API Debug
 	{
 	public:
-		int m_test = 0;
+		static void Log(const std::string _string);
 	};
 }

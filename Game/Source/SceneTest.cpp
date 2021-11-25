@@ -1,23 +1,21 @@
 #include "SceneTest.h"
-#include <iostream>
-
 
 void SceneTest::OnLoad()
 {
-	std::cout << "Scene test = On Load" << std::endl;
+	neo::Debug::Log("Scene test = On Load");
 }
 
 void SceneTest::OnUpdate()
 {
-	std::cout << "Scene test = On Update" << std::endl;
+	neo::Debug::Log("Scene test = On Update");
 }
 
 void SceneTest::OnDraw()
 {
-	std::cout << "Scene test = On Draw" << std::endl;
+	neo::Debug::Log("Scene test = On Draw");
 }
 
 void SceneTest::OnExit()
 {
-	std::cout << "Scene test = On Exit" << std::endl;
+	neo::Debug::Log("Scene test = On Exit");
 }

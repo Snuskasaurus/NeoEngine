@@ -1,7 +1,10 @@
 #pragma once
 #include "../Export.h"
 
-#include <SFML/Graphics.hpp>
+namespace sf
+{
+	class RenderWindow;
+}
 
 namespace neo
 {
@@ -9,11 +12,14 @@ namespace neo
 	{
 		friend class Game; // Game is the only class needing the "Load" method
 	public:
-		static sf::RenderWindow* GetWindow() { return Instance()->m_window; };
-
+		static sf::RenderWindow* GetRenderWindow() { return Instance()->m_window; };
 	private:
+		Screen() = default;
+		~Screen() = default;
 		static Screen* Instance();
 		static void Load();
+		static void Exit();
+	private:
 		sf::RenderWindow* m_window;
 	};
 }
