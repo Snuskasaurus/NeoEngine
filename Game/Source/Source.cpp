@@ -4,8 +4,6 @@
 int main()
 {
 	SceneTest sceneTest;
-	neo::Game::Load(sceneTest);
-	neo::Game::Run();
-	neo::Game::Exit();
+	neo::Game::Run(sceneTest);
 	return 0;
 }

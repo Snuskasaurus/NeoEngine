@@ -107,10 +107,9 @@ Vector2D Vector2D::Normalized() const
 std::string Vector2D::ToString() const
 {
 	std::string s;
-	s += "(";
+	s += "x=";
 	s += std::to_string(x);
-	s += ":";
+	s += " y=";
 	s += std::to_string(y);
-	s += ")";
 	return s;
 }

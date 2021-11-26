@@ -42,6 +42,11 @@ void Scene::Load()
 	OnLoad();
 }
 
+void Scene::Event()
+{
+
+}
+
 void Scene::Update()
 {
 	for (Entity* entity : m_rootsEntities)

@@ -46,11 +46,9 @@
     <ClCompile Include="Files\Core\Settings.cpp" />
     <ClCompile Include="Files\Core\AssetManager.cpp" />
     <ClCompile Include="Files\Assets\Texture.cpp" />
+    <ClCompile Include="Files\Core\Input.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Includes\Core\Physic.h">
-      <Filter>Core</Filter>
-    </ClInclude>
     <ClInclude Include="Headers\Debug.h">
       <Filter>Core</Filter>
     </ClInclude>
@@ -89,12 +87,6 @@
     <ClInclude Include="Includes\Systems\Entity.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="Includes\Components\CircleCollider.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Includes\Components\Collider.h">
-      <Filter>Components</Filter>
-    </ClInclude>
     <ClInclude Include="Includes\Components\SoundEmitter.h">
       <Filter>Components</Filter>
     </ClInclude>
@@ -109,6 +101,7 @@
     <ClInclude Include="Includes\Core\Settings.h" />
     <ClInclude Include="Includes\Core\AssetManager.h" />
     <ClInclude Include="Includes\Assets\Texture.h" />
+    <ClInclude Include="Includes\Core\Input.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Core">

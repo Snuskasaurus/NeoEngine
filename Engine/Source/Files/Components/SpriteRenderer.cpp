@@ -56,7 +56,6 @@ void SpriteRenderer::SetOrigin(float _xOrigin, float _yOrigin)
 void neo::SpriteRenderer::Draw(Vector2D _position, float _size, float _angle, float _opacity)
 {
 	if (nullptr == m_sprite) return;
-
 	static sf::RenderWindow* window = Screen::GetRenderWindow();
 	m_sprite->setPosition(sf::Vector2f(_position.x, _position.y));
 	m_sprite->setScale(sf::Vector2f(_size, _size));

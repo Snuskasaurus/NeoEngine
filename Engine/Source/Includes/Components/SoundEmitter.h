@@ -19,8 +19,7 @@ namespace neo
 	class NEOENGINE_API SoundEmitter
 	{
 	public:
-
-		SoundEmitter() = default;
+		SoundEmitter();
 		~SoundEmitter();
 
 		enum class Type
@@ -35,8 +34,7 @@ namespace neo
 	private:
 		std::vector<sf::SoundBuffer*> m_buffers;
 		sf::Sound* m_sound = nullptr;
-
-		Type m_type;
+		Type m_type = Type::IS_LINEAR;
 		bool m_isRepeated = false;
 	};
 }

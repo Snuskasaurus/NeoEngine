@@ -9,7 +9,7 @@ namespace sf
 
 namespace neo
 {
-	class Texture
+	class NEOENGINE_API Texture
 	{
 	public:
 		static Texture* CreateFromFile(const std::string& _string);

@@ -4,7 +4,7 @@
 
 namespace neo
 {
-	class Texture;
+	class NEOENGINE_API Texture;
 
 	class AssetManager
 	{

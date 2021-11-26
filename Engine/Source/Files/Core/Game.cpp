@@ -1,7 +1,7 @@
 #include "../../Includes/Core/Game.h"
 
+#include "../../Includes/Systems/Scene.h"
 #include "../../Includes/Core/Screen.h"
-#include "../../Includes/Core/Physic.h"
 #include "../../Includes/Core/Audio.h"
 #include "../../Includes/Core/Time.h"
 #include "../../Includes/Core/SceneManager.h"
@@ -15,8 +15,10 @@ Game* Game::Instance()
 	return &game;
 }
 
-void Game::Load(Scene& _scene)
+void Game::Run(Scene& _scene)
 {
+	const static Game* game = Instance();
+
 	Instance()->m_isRunning = true;
 	Settings::LoadFromFile();
 	Screen::Load();
@@ -24,11 +26,6 @@ void Game::Load(Scene& _scene)
 	//Audio::Load();
 	//Time::Load();
 	SceneManager::Load(_scene);
-}
-
-void Game::Run()
-{
-	static Game* game = Instance();
 
 	sf::RenderWindow* window = Screen::GetRenderWindow();
 	if (nullptr == window) return;
@@ -36,8 +33,9 @@ void Game::Run()
 	{
 		// Events
 		sf::Event event;
-		while (window->pollEvent(event))
+		while (game->m_isRunning && window->pollEvent(event))
 		{
+			SceneManager::DispatchEvents(event);
 			if (event.type == sf::Event::Closed) Exit();
 		}
 
@@ -52,11 +50,7 @@ void Game::Run()
 		if (game->m_isRunning == true) SceneManager::Draw();
 		window->display();
 	}
-}
-
-void Game::Exit()
-{
-	Instance()->m_isRunning = false;
+	
 	//Physic::Exit();
 	//Audio::Exit();
 	//Time::Exit();

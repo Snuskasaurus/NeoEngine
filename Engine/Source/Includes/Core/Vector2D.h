@@ -2,6 +2,7 @@
 #include "../Export.h"
 #include "Math.h"
 #include <string>
+#include <iostream>
 
 namespace neo
 {
@@ -50,6 +51,12 @@ namespace neo
 		inline Vector2D GetLeft() const { return Vector2D(-y, x).Normalized(); }
 
 		std::string ToString() const;
+
+		friend std::ostream& operator<<(std::ostream& os, const Vector2D& _vector)
+		{
+			os << "x=" << _vector.x << " y=" << _vector.y;
+			return os;
+		}
 
 		inline float GetAngle() const { return Angle(Vector2D::Zero, *this); }
 		inline float Magnitude() const { return sqrtf(x * x + y * y); }

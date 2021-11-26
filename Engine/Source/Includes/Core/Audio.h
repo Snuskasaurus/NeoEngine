@@ -1,5 +1,6 @@
 #pragma once
 #include "../Export.h"
+#include <vector>
 
 namespace sf
 {
