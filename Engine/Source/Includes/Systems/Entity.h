@@ -12,11 +12,11 @@ namespace neo
 	class NEOENGINE_API Entity
 	{
 	public:
-
+		
 		static Entity* Root;
 
-		Entity() = default;
-		~Entity() = default;
+		Entity(Entity* _parent, const std::string& _name);
+		virtual ~Entity();
 
 		Entity* GetChild(const std::string& _name) const;
 		// This method is automatically called when creating a new entity

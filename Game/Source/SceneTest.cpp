@@ -1,6 +1,5 @@
 #include "SceneTest.h"
 #include <iostream>
-#include "EntityTest.h"
 
 class Test1
 {
@@ -14,7 +13,13 @@ class Test2 : public Test1
 
 void SceneTest::OnLoad()
 {
-	EntityTest* test = new EntityTest();
+	//neo::Debug::Log("Scene test = On Load");
+
+	Test1 test1;
+	Test1 test1Bis;
+	Test2 test2;
+
+	std::cout << "test1 - test2 = " << (typeOf) << std::endl;
 }
 
 void SceneTest::OnLostFocus()
