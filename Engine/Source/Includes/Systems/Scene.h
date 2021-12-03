@@ -3,7 +3,6 @@
 
 #include "../Export.h"
 #include <vector>
-#include "Entity.h"
 #include "../../Includes/Core/Input.h"
 
 #define RESERVE_VEC_ROOT_ENTITIES 10
@@ -15,8 +14,12 @@ namespace neo
 		friend class SceneManager;
 	public:
 		Scene();
-		inline void AttachEntity(Entity& entity);
-		bool DetachEntity(Entity& entity);
+		~Scene() = default;
+
+		template<typename... Args>
+		bool AttachEntity(Entity* entity) { m_rootsEntities.push_back(); };
+		bool DettachEntity(Entity* entity);
+
 		virtual void OnLoad() {};
 		virtual void OnLostFocus() {};
 		virtual void OnGainedFocus() {};
@@ -37,4 +40,5 @@ namespace neo
 		void Exit();
 		std::vector<Entity*> m_rootsEntities;
 	};
+
 }

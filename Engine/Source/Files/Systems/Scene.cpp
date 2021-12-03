@@ -11,26 +11,15 @@ neo::Scene::Scene()
 
 inline void neo::Scene::AttachEntity(Entity& entity)
 {
-	size_t size = m_rootsEntities.max_size();
-	if (m_rootsEntities.size() >= size - 1)
-	{
-		m_rootsEntities.resize(size * 2);
-	}
-	m_rootsEntities.emplace_back(&entity);
+	m_rootsEntities.push_back(&entity);
 }
 
-bool neo::Scene::DetachEntity(Entity& entity)
+bool neo::Scene::DettachEntity(Entity& entity)
 {
-	Entity* entityToDetach = &entity;
-	for (size_t index = 0; index < m_rootsEntities.size(); index++)
+	for (Entity* entity : m_rootsEntities)
 	{
-		if (m_rootsEntities[index] == entityToDetach)
-		{
-			m_rootsEntities.erase(m_rootsEntities.begin() + index);
-			return true;
-		}
+
 	}
-	return false;
 }
 
 void Scene::Load()

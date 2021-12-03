@@ -4,68 +4,6 @@ namespace neo
 {
 	Entity* Entity::Root = nullptr;
 
-	Entity::Entity(Entity* _parent, const std::string& _name)
-		: m_name(_name)
-	{
-		if (_parent == nullptr && _name != "Root")
-		{
-			Root = new Entity(nullptr, "Root");
-			return;
-		}
-		if (_parent == nullptr)
-		{
-			m_parent->AttachChild(*Root);
-			return;
-		}
-		m_parent->AttachChild(*this);
-	}
-
-	Entity::~Entity()
-	{
-		if (nullptr != m_parent) DetachChild(*this);
-		for (Entity* entity : m_childs) delete entity;
-		for (Component* component : m_components) delete component;
-	}
-
-	Entity* Entity::GetChild(const std::string& _name) const
-	{
-		for (Entity* entity : m_childs)
-		{
-			if (entity->m_name == _name) return entity;
-		}
-		return nullptr;
-	}
-
-	bool Entity::DetachChild(Entity& _child)
-	{
-		Entity* childToDetach = &_child;
-		for (size_t index = 0; index < m_childs.size(); index++)
-		{
-			if (m_childs[index] == childToDetach)
-			{
-				m_childs.erase(m_childs.begin() + index);
-				return true;
-			}
-		}
-		return false;
-	}
-
-	bool Entity::DeleteChild(const std::string& _name)
-	{
-		Entity* child = GetChild(_name);
-		if (nullptr == child) return false;
-		DetachChild(*child);
-		delete&* child;
-		return true;
-	}
-
-	bool Entity::DeleteChild(Entity& _child)
-	{
-		if (false == DetachChild(_child)) return false;
-		delete& _child;
-		return true;
-	}
-
 	Component* Entity::GetComponent(const std::string& _name) const
 	{
 		for (Component* component : m_components)
